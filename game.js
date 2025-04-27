@@ -533,7 +533,7 @@ function gameOver(success) {
     // Ridimensiona l'immagine per occupare tutto lo schermo
     //background.setDisplaySize(width, height);   
 
-    const background = this.add.image(width/2, height/2, bgKey).setDisplaySize((config.height*4434)/2500, config.height);
+    const background = this.add.image(width/2, height/2, bgKey).setDisplaySize((config.height*3500)/2500, config.height);
 
     //background = this.add.image(425, 425, bgKey);
     //background.setDisplaySize(850, 850);

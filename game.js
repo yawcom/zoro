@@ -73,7 +73,7 @@ function createStartScreen() {
     const height = this.scale.height;
 
     // Add background image with fixed size instead of scaling to screen
-    const background = this.add.image(width/2, height/2, 'background_Start').setDisplaySize((config.height*3500)/2500, config.height);
+    const background = this.add.image(width/2, height/2, 'background_Start').setDisplaySize((config.height*2420)/1729, config.height);
     // Keep original size instead of scaling
     
     const centerX = this.cameras.main.width / 2;
@@ -82,7 +82,7 @@ function createStartScreen() {
     // Title - increased size and added shadow
     const title = this.add.text(centerX, centerY - 100, 'Benvenuto \n in Zoro Sequence', {
         fontFamily: 'Arial',
-        fontSize: '60px', // Increased from 80px to 120px
+        fontSize: '40px', // Increased from 80px to 120px
         fontStyle: 'bold',
         color: '#ffffff',
         align: 'center',
@@ -101,7 +101,7 @@ function createStartScreen() {
     // Start button - removed backgroundColor
     const startButton = this.add.text(centerX, centerY + 50, 'START', {
         fontFamily: 'Arial',
-        fontSize: '50px',
+        fontSize: '30px',
         fontStyle: 'bold',
         color: '#ffffff',
         padding: {
@@ -114,9 +114,9 @@ function createStartScreen() {
 
 // Game instructions text
 const instructionsText = this.add.text(config.width / 2, config.height / 2 - 20, 
-    'Memorizza attentamente la sequenza di carte raffiguranti Zoro: avrai solo 10 secondi per osservare le carte scelte casualmente tra 32 disponibili. Il tuo obiettivo? Selezionare esattamente le carte viste in precedenza. Hai fino a 3 errori a disposizione... riesci a ricordarle tutte? Buona fortuna!', {
+    'Memorizza la sequenza di carte raffiguranti Zoro: avrai solo 10 secondi per osservare le carte scelte tra 32 disponibili. Il tuo obiettivo? Selezionare esattamente le carte viste in precedenza. Riesci a ricordarle tutte? Buona fortuna!', {
         fontFamily: 'Arial',
-    fontSize: '18px',
+    fontSize: '16px',
     fontStyle: 'italic',
     color: '#ffffff',
     stroke: '#000000',
@@ -126,7 +126,7 @@ const instructionsText = this.add.text(config.width / 2, config.height / 2 - 20,
 }).setOrigin(0.5).setShadow(2, 2, '#000000', 2, false, true);
 
 instructionsText.setText('');
-const fullText = 'Memorizza attentamente la sequenza di carte raffiguranti Zoro: avrai solo 10 secondi per osservare le carte scelte casualmente tra 32 disponibili. Il tuo obiettivo? Selezionare esattamente le carte viste in precedenza. Hai fino a 3 errori a disposizione... riesci a ricordarle tutte? Buona fortuna!';
+const fullText = 'Memorizza la sequenza di carte raffiguranti Zoro: avrai solo 10 secondi per osservare le carte scelte tra 32 disponibili. Il tuo obiettivo? Selezionare esattamente le carte viste in precedenza. Riesci a ricordarle tutte? Buona fortuna!';
 let i = 0;
 
 this.time.addEvent({
@@ -152,11 +152,11 @@ const copyImage = this.add.image(config.width -180, config.height - 25, 'copy')
     
     // Remove hover effect that changes background color
     startButton.on('pointerover', () => {
-        startButton.setStyle({ fontSize: '55px' }); // Just increase font size instead
+        startButton.setStyle({ fontSize: '35px' }); // Just increase font size instead
     });
     
     startButton.on('pointerout', () => {
-        startButton.setStyle({ fontSize: '50px' }); // Restore original font size
+        startButton.setStyle({ fontSize: '30px' }); // Restore original font size
     });
     
     // Start game on click
@@ -533,7 +533,7 @@ function gameOver(success) {
     // Ridimensiona l'immagine per occupare tutto lo schermo
     //background.setDisplaySize(width, height);   
 
-    const background = this.add.image(width/2, height/2, bgKey).setDisplaySize((config.height*3500)/2500, config.height);
+    const background = this.add.image(width/2, height/2, bgKey).setDisplaySize((config.height*2420)/1729, config.height);
 
     //background = this.add.image(425, 425, bgKey);
     //background.setDisplaySize(850, 850);
@@ -542,7 +542,7 @@ function gameOver(success) {
     // Game over message
     this.add.text(width/2, height/2 - 100, textGameOver, {
         fontFamily: 'Arial',
-        fontSize: '60px',
+        fontSize: '40px',
         fontStyle: 'bold',
         color: '#ffffff',
         stroke: '#000000',
@@ -552,7 +552,7 @@ function gameOver(success) {
     // Final score
     this.add.text(width/2, height/2, 'Punteggio totale: ' + score, {
         fontFamily: 'Arial',
-        fontSize: '40px',
+        fontSize: '20px',
         fontStyle: 'bold',
         color: '#ffffff',
         stroke: '#000000',
@@ -562,7 +562,7 @@ function gameOver(success) {
     // Play again button
     const playAgainButton = this.add.text(width/2, height/2 + 100, 'Nuova partita', {
         fontFamily: 'Arial',
-        fontSize: '50px',
+        fontSize: '30px',
         fontStyle: 'bold',
         color: '#ffffff',
         padding: {
@@ -576,11 +576,11 @@ function gameOver(success) {
     
     // Add hover effect
     playAgainButton.on('pointerover', () => {
-        playAgainButton.setStyle({ fontSize: '55px' }); // Just increase font size instead
+        playAgainButton.setStyle({ fontSize: '35px' }); // Just increase font size instead
     });
     
     playAgainButton.on('pointerout', () => {
-        playAgainButton.setStyle({ fontSize: '50px' }); // Restore original font size
+        playAgainButton.setStyle({ fontSize: '30px' }); // Restore original font size
     });
 
     
